@@ -1,0 +1,8 @@
+para abrirlo en xam 
+localhost/dasboard
+phpmyadmin
+añadir base de datos form
+con tabla login
+con atributos
+username,password
+y las contraseñas

@@ -47,7 +47,7 @@
 					<div class="section_1">
 						<div class="table">
 							<div class="progress-4"></div>
-										<img src="air/1.gif">
+										<!--<img src="air/1.gif">-->
 							</div>
 						
 						
@@ -59,7 +59,7 @@
 						
 							<!-- <ul class="chat">
 
-							<!-- 
+							 
 								<p >Добро пожаловать в инструменты, необходимые для получения анонимной информации от разных пользователей, не злоупотребляйте с первого раза;)</p> -->
 
 								<!-- <p >01101100 01100001 00100000 01100101 01100100 01110101 01100011 01100001 01100011 01101001 01101111 01101110 00100000 01100101 01110011 00100000 01100101 01101100 00100000 01100011 01100001 01101101 01101001 01101110 01101111 00100000 01100001 00100000 01101100 01100001 00100000 01110000 01100001 01111010</p> 
@@ -415,10 +415,10 @@
 					<div class="section_camera">
 						<div class="inf" >
 
-<!-- 
+ 
 							 <img class="img_show" id="img_1" src="http://webcam3.vilhelmina.se/mjpg/video.mjpg">
 							<img class="img_show" id="img_2" src="http://85.13.14.79/cgi-bin/faststream.jpg?stream=full&fps=0">
-							<img class="img_show" id="img_3" src="http://193.45.228.92/mjpg/video.mjpg"> -->
+							<img class="img_show" id="img_3" src="http://193.45.228.92/mjpg/video.mjpg"> 
 
 
 
@@ -880,7 +880,7 @@
 													</div>
 						
 
-					<!-- <div id="number">	
+					 <div id="number">	
 						<script>
 							document.write(loteria);
 						</script>
