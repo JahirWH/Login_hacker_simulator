@@ -88,7 +88,7 @@
 					<div class="back" id="t" >
 						<section class="overflow" > 
 
-							<nav>FAKE ID</nav>
+							<nav ><h2>FAKE ID</h2></nav>
 							<div class="overflow_div1">
 								<div  id="div_img1"></div>
 								<ul class="ul_overflow" >
@@ -122,7 +122,7 @@
 
 									<!-- Generador de Localizacion -->
 									<li>
-										localitation
+										Localizacion
 										<?php
 										$ran = rand(1.000,999.999);
 
@@ -157,6 +157,7 @@
 
 									<!-- Gneradpr  de Edad -->
 									<li style="display: flex;">
+										<p>Entre: </p>
 										<?php
 
 											// Generating a random number
@@ -171,13 +172,26 @@
 											// Generating a random number in a
 											// Specified range.
 										
-										$randomNumber = rand(18,80);
+										$randomNumber = rand(18,65);
 
 											// Print
 										print_r($randomNumber );
 
+										
+
 										?>
-										<p> años</p>
+										<p> años  </p>
+										<?php 
+
+										$randomNumber = rand(18,65);
+
+											// Print
+										print_r($randomNumber );
+
+										
+
+										?>
+										<p>años</p>
 									</li>
 									<li>
 										<!---->

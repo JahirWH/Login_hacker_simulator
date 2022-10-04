@@ -24,7 +24,7 @@ color: greenyellow;
 	width: 100%;
 	z-index: -1;
 	background-size: cover;
-	background-image: url(backgrounds/6.jpg);
+	background-image: url(backgrounds/12.png);
 	/*background-color: rgba(0, 0, 0, 1.0);*/	
 	/*background-position: center;*/
 }
@@ -1370,8 +1370,8 @@ background-color: rgb(131 239 24 / 73%);
 	margin: auto;
 	position: absolute;
 	display:flex;
-	top: 40px;
-	left: 10px;
+	top: 140px;
+	left: 50px;
 
 }
 .text_ip{
