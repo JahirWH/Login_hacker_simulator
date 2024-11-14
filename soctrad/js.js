@@ -285,15 +285,15 @@ if(!existe){
 
 // ocultar 
 
-function acess() {
-    var a = document.getElementById("ro");
-    if (a.style.display === "none") {
-        a.style.display = "block";
-    } else {
-        a.style.display = "none";
-        return;
+    function acess() {
+        var a = document.getElementById("ro");
+        if (a.style.display === "none") {
+            a.style.display = "block";
+        } else {
+            a.style.display = "none";
+            return;
+        }
     }
-}
 
 
 // acesso
