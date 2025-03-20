@@ -1,5 +1,5 @@
 <?php
 
-$contraseña = '777';
-$usuario = '1656';
+$contraseña = 'admin';
+$usuario = 'admin';
 ?>

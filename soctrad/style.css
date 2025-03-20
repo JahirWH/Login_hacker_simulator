@@ -20,13 +20,12 @@ color: greenyellow;
 }
 ._back{
 	position: fixed;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
-	background-size: cover;
-	background-image: url(backgrounds/12.png);
-	/*background-color: rgba(0, 0, 0, 1.0);*/	
-	/*background-position: center;*/
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-image: url(backgrounds/4.jpg);
+  background-repeat: no-repeat;
 }
 
 .back>img{
@@ -170,9 +169,8 @@ color: greenyellow;
 	}
 	.Date{
 		color: #493;
-		width: 50%;
+		width: calc(100%/2);
 		float: right;
-
 		font-size: 13px;
 	}
 	.Date>p{
@@ -183,20 +181,20 @@ color: greenyellow;
 		top: 0;
 		position: relative;
 		width:100%;
-		height: 70px;
+		display: flex;
+		height: 20vh;
 
 	}
 	.nav>p{
 		color: #f6f7f1e6; 
 		font-size: 30px;
-		margin-left: 40px;
-		margin-top: 30px;
+		margin:10px auto;
+		width: calc(100%/2);
 	}
 	.section_1{
-		width: 100%;
-    margin-top: -4%;
+		width: 50%;
     display: flex;
-    height: 370px;
+    height: 30vh;
 }
 	
 	.table{
