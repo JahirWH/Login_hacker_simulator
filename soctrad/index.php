@@ -13,6 +13,7 @@
 	
 </head>
 <body >
+	<!-- Se que esta todo desorganizado y no tiene un orden o almenos no uno coerente, pero fue de mis primeras webs para experimentar con php y javascript -->
 
 	<div  class="loading" id="lo">
 		<img class="loading_img" src="vOxo92o.gif">
@@ -30,11 +31,8 @@
 				<div class="Date">
 					<p style="color:darkcyan;font-family:Minecraft;">
 						<?php
-						echo '<p>Pedido procesado a las 
-						echo date('H:i, jS F');
-						echo '</p>';
+						  echo 'Pedido procesado el ' . date('j de F de Y a las H:i') . '</p>';
 						?>
-
 						<script type="text/javascript"> 
 							var d = new Date();
 							document.write('Fecha:  '+d.getDate(),  '  Semana:  '+d.getDay(),  '  Mes:  '+d.getMonth(),   '  Año:   '+d.getFullYear(),  
@@ -104,7 +102,7 @@
 										<div class="text_ip"> ip:</div>
 										<strong  id="ipId"></strong>
 									</div>
-									<li>
+									<li id="nombreGenerado">
 										<script type="text/javascript">
 									function generarNombre() {
     const nombres = ["Pepe", "Carlos", "Jesús", "Lola", "Rosa", "Maria", "Aaliyah", "Abbey", "Abbie", "Abigail", "Ada", "Adalyn",
@@ -250,10 +248,10 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 
 							<!-- boton para generar datos -->
 
-							<div class="overflow_div2">
+							<!-- <div class="overflow_div2">
 								<button class="btn_2">Generar datos</button>
 							</div>
-
+ -->
 
 							<strong id="close"><button class="btn" onclick="overflow()">X</button></strong>
 						</section>
