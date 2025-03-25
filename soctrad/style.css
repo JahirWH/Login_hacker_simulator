@@ -360,7 +360,7 @@ color: greenyellow;
 	}
 	#div_img1{}
 	.div_img2{
-		background-image: url("https://thispersondoesnotexist.com/image");
+		background-image: url("https://thispersondoesnotexist.com");
 		background-size: cover;
 		justify-content: right;
 		text-align: right;

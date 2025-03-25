@@ -30,10 +30,11 @@
 				<div class="Date">
 					<p style="color:darkcyan;font-family:Minecraft;">
 						<?php
-						echo '<p>Pedido procesado a las ';
+						echo '<p>Pedido procesado a las 
 						echo date('H:i, jS F');
 						echo '</p>';
 						?>
+
 						<script type="text/javascript"> 
 							var d = new Date();
 							document.write('Fecha:  '+d.getDate(),  '  Semana:  '+d.getDay(),  '  Mes:  '+d.getMonth(),   '  Año:   '+d.getFullYear(),  
@@ -61,18 +62,21 @@
 							</div>
 							
 						
-					<!-- 		<ul class="chat">
 
+
+
+							<ul class="chat">
 							 
-								<p >Добро пожаловать в инструменты, необходимые для получения анонимной информации от разных пользователей, не злоупотребляйте с первого раза;)</p>
+								<p >Добро пожаловать в инструменты, необходимые для получения анонимной информации от разных пользователей, не злоупотребляйте с первого раза;) </p>
 
-								<p >01101100 01100001 00100000 01100101 01100100 01110101 01100011 01100001 01100011 01101001 01101111 01101110 00100000 01100101 01110011 00100000 01100101 01101100 00100000 01100011 01100001 01101101 01101001 01101110 01101111 00100000 01100001 00100000 01101100 01100001 00100000 01110000 01100001 01111010</p> 
-								<button id="cal" onclick="operacion()">Calculator Alert</button
-								  									
+								<p >01101100 01100001 00100000 01100101 01100100 01110101 01100011 01100001 01100011 01101001 01101111 01101110 00100000 01100101 01110011 00100000 01100101 01101100 00100000 01100011 01100001 01101101 01101001 01101110 01101111 00100000 01100001 00100000 01101100 01100001 00100000 01110000 01100001 01111010 </p> 
+								<button id="cal" onclick="operacion()">
+									Calculator Alert
+								</button>
+								  										
+ 					
+ 						</ul>
 
-								
- 							</ul>  -->
- 							
 
 						
 
@@ -101,28 +105,50 @@
 										<strong  id="ipId"></strong>
 									</div>
 									<li>
-										<?php
+										<script type="text/javascript">
+									function generarNombre() {
+    const nombres = ["Pepe", "Carlos", "Jesús", "Lola", "Rosa", "Maria", "Aaliyah", "Abbey", "Abbie", "Abigail", "Ada", "Adalyn",
+        "Adelaide", "Adele", "Adeline", "Adrianna", "Agatha", "Agnes", "Aisha", "Alease", "Alene", "Alesha", "Alex",
+        "Alexandra", "Alexia", "Alice", "Aline", "Alisha", "Alison", "Amanda", "Amber", "Amy", "Andi", "Angelina",
+        "Angie", "Anna", "Annabelle", "Anne", "April", "Arlene", "Ashley", "Audrey", "Barbra", "Beatrice", "Bernadette",
+        "Bertha", "Beth", "Betty", "Beverly", "Blanche", "Brenda", "Bridget", "Britney", "Brooklynn", "Candice",
+        "Carlie", "Caroline", "Casey", "Catherine", "Chantal", "Charlotte", "Chelsea", "Cher", "Chloe", "Christal",
+        "Aaron", "Abel", "Abraham", "Ace", "Adam", "Alan", "Albert", "Alexander", "Alfred", "Allen", "Alton",
+        "Ambrose", "Anderson", "Andrew", "Andy", "Angus", "Anthony"
+    ];
 
-										$nombres = array("Pepe", "Carlos", "Jesús", "Lola", "Rosa", "Maria" ,"Aaliyah","Abbey","Abbie","Abigail","Ada","Adalyn",
-											"Adelaide","Adele","Adeline","Adrianna","Agatha","Agnes","Aisha","Alease",
-											"Alene","Alesha","Alex","Alexandra","Alexia","Alice","Aline","Alisha","Alison","Amanda","Amber","Amy","Andi","Angelina",
-											"Angie","Anna","Annabelle","Anne","April","Arlene","Ashley","Audrey","Barbra","Beatrice","Bernadette","Bertha","Beth",
-											"Betty","Beverly","Blanche","Brenda","Bridget","Britney","Brooklynn","Candice","Carlie","Caroline","Casey","Catherine",
-											"Chantal","Charlotte","Chelsea","Cher","Chloe","Christal","Aaron ","Abel ","Abraham ","Ace  ","Adam  ","Alan  ","Albert"
-											,"Alexander ","Alfred ","Allen ","Alton ","Ambrose ","Anderson ","Andrew ","Andy ","Angus ","Anthony "); 
+    const apellidos1 = ["Martin", "Lopez", "Salas", "Mateo", "Abas", "De Diego", "Abrahams", "Abramson", "Adamson", "Ainsworth",
+        "Albertson", "Aniston", "Battle", "Beckett", "Beckham", "Black", "Bramson", "Brown", "Bullock", "Burrell",
+        "Bush", "Clinton", "Cocks", "Cook", "Cox", "Cranston", "Derricks", "Disney"
+    ];
 
-										$apellidos1 = array("Martin", "Lopez", "Salas", "Mateo", "Abas", "De Diego","Abrahams ","Abramson ","Adamson ","Ainsworth ","Albertson","Aniston","Battle","Beckett","Beckham","Black","Bramson","Brown","Bullock","Burrell","Bush","Clinton","Cocks","Cook","Cox","Cranston","Derricks","Disney");
+    const apellidos2 = ["Quesada", "Alcala", "Marín", "Suarez", "Cobos", "Rios", "Kendall", "Lennon", "Mathews",
+        "Mayer", "Michaelson", "Miller", "Morrison", "O’Sullivan", "Pemberton", "Perry", "Sheeran", "Simpson",
+        "Smith", "Stone", "Taylor", "Walsh", "Washington", "Williams", "Willis", "Wilson"
+    ];
 
-										$apellidos2 = array("Quesada", "Alcala", "Marín", "Suarez", "Cobos","Rios","Kendall","Lennon","Mathews","Mayer","Michaelson","Miller","Morrison","O’Sullivan","Pemberton","Perry","Sheeran","Simpson","Smith","Stone","Taylor","Walsh","Washington","Williams","Willis","Wilson");
+    // Obtener índices aleatorios
+    const randn = Math.floor(Math.random() * nombres.length);
+    const rand2 = Math.floor(Math.random() * apellidos1.length);
+    const rand3 = Math.floor(Math.random() * apellidos2.length);
 
-										$randn = array_rand($nombres);
-										$radn2 = array_rand($apellidos1);
-										$rand3 = array_rand($apellidos2);
-										echo "Nombre <b> ". $nombres[$randn] 
-										." ". $apellidos1[$radn2] 
-										."  ". $apellidos2[$rand3];
-										?>
-									</b> </li>
+    // Concatenar los nombres
+    return `${nombres[randn]} ${apellidos1[rand2]} ${apellidos2[rand3]}`;
+}
+
+// Ejemplo de uso en consola
+console.log(generarNombre());
+
+// O si quieres mostrarlo en una página:
+document.getElementById("nombreGenerado").textContent = generarNombre();
+</script>
+
+
+
+									</li>
+
+
+
 
 									<!-- Generador de Localizacion -->
 									<li>
@@ -224,9 +250,9 @@
 
 							<!-- boton para generar datos -->
 
-							<!-- <div class="overflow_div2">
+							<div class="overflow_div2">
 								<button class="btn_2">Generar datos</button>
-							</div> -->
+							</div>
 
 
 							<strong id="close"><button class="btn" onclick="overflow()">X</button></strong>

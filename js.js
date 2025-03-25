@@ -1,34 +1,26 @@
- function ver(){
+function ver() {
+    let papas = document.getElementById("iner"); // Asegúrate de que "iner" es un <p> o <span>
+    let pas = document.getElementById("user").value;
+    let con = document.getElementById("pas").value;
 
-  
-     let pas = document.getElementById("user").value;
-     let con = document.getElementById("pas").value;
-     // let alert = document.getElementById("IDhere");
+    if (pas === "0101" && con === "999") {
+        papas.textContent = "Redirigiendo...";
+        setTimeout(() => {
+            window.location.href = "/Login/soctrad";
+        }, 1000); // Espera 1 segundo antes de redirigir
+    } else {
+            window.location.href = "/Login/index2.html";
+            
 
-     if (pas == "1935" && con == "27,32") {
-        IDhere.innerHTML= "Redirec... ";
-        if (1<3) {
-         window.location.href = "/dashboard/login/soctrad";
-        }
-      return false;
-     }
-     
-    else {
-
-      IDhere.innerHTML= "Password or Username is incorrect";
-         return false;
     }
-      }
+}
+
      
-      function res(){
-        alert("Whats this is the password? :p ");
-      }
+      // function res(){
+      //   alert("Whats this is the password? :p ");
+      // }
       
-    $('.input').keypress(function (e) {
-  if (e.which == 13) {
-    $('form#login').submit();
-  }
-});
+
 
 
     // if (pas !== "t" && con !== "con") {
@@ -38,3 +30,12 @@
     // }
 
 
+// ACTUALIZACIOIN 24/4/25
+
+function muestra_pas() {
+  let rig = document.getElementById('pass');
+  let fa = document.getElementById('user');
+
+  rig.innerHTML = "user: 0101";
+  fa.innerHTML = "pasword: 999";
+}

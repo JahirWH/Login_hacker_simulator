@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 $host = "185.176.40.25";  // Reemplázalo con el host de tu hosting
 $usuario = "root";         // Tu usuario de la base de datos
 $clave = "8M2Z0N004";               // Tu contraseña
@@ -12,3 +12,4 @@ if (!$conexion) {
     echo "Conexión exitosa a la base de datos.";
 }
 ?>
+ -->

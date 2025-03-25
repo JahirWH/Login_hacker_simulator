@@ -1,16 +1,16 @@
-// window.onload = function() {
+window.onload = function() {
 
-// visor=document.getElementById("reloj"); //localizar pantalla del reloj
-// //asociar eventos a botones: al pulsar el botón se activa su función.
-// document.cron.boton1.onclick = activo; 
-// document.cron.boton2.onclick = pausa;
-// document.cron.boton1.disabled=false;
-// document.cron.boton2.disabled=true;
-// //variables de inicio:
-// var marcha=0; //control del temporizador
-// var cro=0; //estado inicial del cronómetro.
+visor=document.getElementById("reloj"); //localizar pantalla del reloj
+//asociar eventos a botones: al pulsar el botón se activa su función.
+document.cron.boton1.onclick = activo; 
+document.cron.boton2.onclick = pausa;
+document.cron.boton1.disabled=false;
+document.cron.boton2.disabled=true;
+//variables de inicio:
+var marcha=0; //control del temporizador
+var cro=0; //estado inicial del cronómetro.
 
-// }
+}
 
  window.addEventListener("load",function(){
    document.getElementById("lo").classList.toggle("loading2")
