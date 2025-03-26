@@ -28,10 +28,10 @@
 
 				<p class="title">ONakingmind</p>
 				<div class="Date">
-					<p style="color:darkcyan;font-family:Minecraft;">
+					<p style="color:darkcyan;font-family:Minecraft; ">
 						<?php
 						echo '<p>Pedido procesado a las 
-						echo date('H:i, jS F');
+						echo date('H:i, jS F')';
 						echo '</p>';
 						?>
 
@@ -39,6 +39,7 @@
 							var d = new Date();
 							document.write('Fecha:  '+d.getDate(),  '  Semana:  '+d.getDay(),  '  Mes:  '+d.getMonth(),   '  Año:   '+d.getFullYear(),  
 								'  Hora:  '+d.getHours(), '  Minutos:  '+d.getMinutes(),' Segundos:   '+d.getSeconds() );
+
 							</script>
 						</p>
 					</div>
