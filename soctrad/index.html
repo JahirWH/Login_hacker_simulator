@@ -28,17 +28,18 @@
 
 				<p class="title">ONakingmind</p>
 				<div class="Date">
-					<p style="color:darkcyan;font-family:Minecraft; ">
-						<?php
-						echo '<p>Pedido procesado a las 
-						echo date('H:i, jS F')';
-						echo '</p>';
-						?>
+				    <p style="color:darkcyan;font-family:Minecraft;"></p>
+
+
 
 						<script type="text/javascript"> 
-							var d = new Date();
-							document.write('Fecha:  '+d.getDate(),  '  Semana:  '+d.getDay(),  '  Mes:  '+d.getMonth(),   '  Año:   '+d.getFullYear(),  
-								'  Hora:  '+d.getHours(), '  Minutos:  '+d.getMinutes(),' Segundos:   '+d.getSeconds() );
+							// Agregar en tu archivo `js.js` o dentro de una etiqueta <script> en HTML
+								window.onload = function() {
+								    let fechaElemento = document.querySelector(".Date p");
+								    let fecha = new Date();
+								    
+								    fechaElemento.innerHTML = `Fecha: ${fecha.getDate()} Semana: ${fecha.getDay()} Mes: ${fecha.getMonth() + 1} Año: ${fecha.getFullYear()} Hora: ${fecha.getHours()} Minutos: ${fecha.getMinutes()} Segundos: ${fecha.getSeconds()}`;
+								};
 
 							</script>
 						</p>
@@ -153,13 +154,15 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 
 									<!-- Generador de Localizacion -->
 									<li>
-										Localizacion
-										<?php
-										$ran = rand(1.000,999.999);
+										Localizacion <p id="randomNum"></p>
 
-											// Print
-										print_r($ran );
-										?>
+										<script type="text/javascript">
+											document.addEventListener("DOMContentLoaded", function() {
+											    let randomNumero = (Math.random() * (999.999 - 1.000) + 1.000).toFixed(3);
+											    document.getElementById("randomNum").innerText = randomNumero;
+											});
+
+										</script>
 									</li>
 
 
