@@ -3,11 +3,11 @@
 ![PHP](https://img.shields.io/badge/PHP-Legacy-777bb4)  
 
 ![Captura3](./banner.webp)  
+![Captura4](./banner2.webp) 
 
 
-
-## 📜 Certificado de Descontinuación Oficial  
-🪦 **Causa de muerte**: PHP se volvió HTML para poder descansar en GitHub Pages  
+## Descontinuación 
+ Una de mis primeras webs testeando html con php
 
 ---
 

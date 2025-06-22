@@ -6,10 +6,10 @@ function ver() {
     if (pas === "0101" && con === "999") {
         papas.textContent = "Redirigiendo...";
         setTimeout(() => {
-            window.location.href = "/Login/soctrad";
+            window.location.href = "/soctrad";
         }, 1000); // Espera 1 segundo antes de redirigir
     } else {
-            window.location.href = "/Login/index2.html";
+            window.location.href = "/index2.html";
             
 
     }

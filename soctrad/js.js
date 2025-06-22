@@ -19,6 +19,7 @@ var cro=0; //estado inicial del cronómetro.
 
 
 
+
 // obtener ip
     document.addEventListener("DOMContentLoaded", function() {
                                                 let randomNumero = (Math.random() * (999.999 - 1.000) + 1.000).toFixed(3);
@@ -333,7 +334,7 @@ function send(event){
     }
      }
     function redirec(){
-         window.location.href = "http://localhost/dashboard/login/";
+         window.location.href = "./dashboard/login/";
     }
 }
 

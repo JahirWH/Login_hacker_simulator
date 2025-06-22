@@ -8,6 +8,7 @@
 	<link rel="apple-touch-icon" href="wifi.png">
 	<script type="text/javascript" src="js.js"></script>
 	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 	
@@ -15,7 +16,7 @@
 <body >
 
 	<div  class="loading" id="lo">
-		<img class="loading_img" src="vOxo92o.gif">
+		<img class="loading_img" src="vOxo92o.gif" alt="Cargando...">
 	</div>
 	
 	<div class="_back" >
@@ -54,30 +55,22 @@
 								
 							</div>
 							
-							<img src="air/1.gif">
+							<img src="air/1.gif" alt="Animación aire">
 							</div>
 						
 						
 								
 							<div class="table2">
-										<img src="mundi.png">
+								<img src="mundi.png" alt="Mapa del mundo">
 							</div>
 							
 						
 
 
 
-							<ul class="chat">
-							 
-								<p >Добро пожаловать в инструменты, необходимые для получения анонимной информации от разных пользователей, не злоупотребляйте с первого раза;) </p>
-
-								<p >01101100 01100001 00100000 01100101 01100100 01110101 01100011 01100001 01100011 01101001 01101111 01101110 00100000 01100101 01110011 00100000 01100101 01101100 00100000 01100011 01100001 01101101 01101001 01101110 01101111 00100000 01100001 00100000 01101100 01100001 00100000 01110000 01100001 01111010 </p> 
-								<button id="cal" onclick="operacion()">
-									Calculator Alert
-								</button>
-								  										
- 					
- 						</ul>
+							<ul class="chat" id="chat">
+							  <!-- Los mensajes se llenarán por JS -->
+							</ul>
 
 
 						
@@ -106,7 +99,7 @@
 										<div class="text_ip"> ip:</div>
 										<strong  id="ipId"></strong>
 									</div>
-									<li>
+									<li id="nombreGenerado">
 										<script type="text/javascript">
 									function generarNombre() {
     const nombres = ["Pepe", "Carlos", "Jesús", "Lola", "Rosa", "Maria", "Aaliyah", "Abbey", "Abbie", "Abigail", "Ada", "Adalyn",
@@ -125,7 +118,7 @@
     ];
 
     const apellidos2 = ["Quesada", "Alcala", "Marín", "Suarez", "Cobos", "Rios", "Kendall", "Lennon", "Mathews",
-        "Mayer", "Michaelson", "Miller", "Morrison", "O’Sullivan", "Pemberton", "Perry", "Sheeran", "Simpson",
+        "Mayer", "Michaelson", "Miller", "Morrison", "O'Sullivan", "Pemberton", "Perry", "Sheeran", "Simpson",
         "Smith", "Stone", "Taylor", "Walsh", "Washington", "Williams", "Willis", "Wilson"
     ];
 
@@ -141,7 +134,6 @@
 // Ejemplo de uso en consola
 console.log(generarNombre());
 
-// O si quieres mostrarlo en una página:
 document.getElementById("nombreGenerado").textContent = generarNombre();
 </script>
 
@@ -185,53 +177,13 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 
 									<!-- Gneradpr  de Edad -->
 									<li style="display: flex;">
-										<p>Entre: </p>
-										<?php
-
-											// Generating a random number
-									//	$randomNumber = rand();
-
-											// Print
-									//	print_r($randomNumber);
-
-											// New Line
-									//	print_r("\n");
-
-											// Generating a random number in a
-											// Specified range.
-										
-										$randomNumber = rand(18,65);
-
-											// Print
-										print_r($randomNumber );
-
-										
-
-										?>
-										<p> años  </p>
-										<?php 
-
-										$randomNumber = rand(18,65);
-
-											// Print
-										print_r($randomNumber );
-
-										
-
-										?>
-										<p>años</p>
+										<p>Edad: </p>
+										<span id="edadGenerada"></span>
+										<p> años</p>
 									</li>
 									<li>
-										<!---->
-
-
-
-
-									</li>
-
-
-									<li>Seguro social estadounidense (SSN) de FNG <b> 
-
+										Seguro social estadounidense (SSN) de FNG <b><span id="ssnGenerado"></span></b>
+										<!--
 										<?php
 										require('fngssn.class.php');
 													// Instantiate the class
@@ -242,7 +194,8 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 													// Validate a SSN
 													// echo $fngssn->validateSSN('421-61-1998');
 										?>
-									</b></li>
+										-->
+									</li>
 								</ul>
 							</div>
 
@@ -268,62 +221,62 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 						<div class="container_modal" >
 							<p style="color:green; font-size: 15px; padding: 4px;">Links</p>
 							<li><a href="https://godofredo.ninja/mejores-temas-para-sublime-text-3-2/"><b>Import Styles from Sublime text3 ayu and Agila</b></a></li>
-							<li><a target="_blank" href="https://gsuite.tools/es/ip-location">Ip lozalizer from Camera all Tools</a></li>
-							<li><a target="_blank" href="https://herramientas-online.com/generador-visa-mastercard-bancos-reales.php">Generador Visa Mastercard</a></li>
-							<li><a target="_blank" href="https://www.earthcam.com/"> cameras from eatr</a> </li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://gsuite.tools/es/ip-location">Ip lozalizer from Camera all Tools</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://herramientas-online.com/generador-visa-mastercard-bancos-reales.php">Generador Visa Mastercard</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.earthcam.com/"> cameras from eatr</a> </li>
 
-							<li><a target="_blank" href="https://www.skylinewebcams.com/en/webcam.html">Sky cams online</a></li>
-							<li><a target="_blank" href="http://www.opentopia.com/">cam live citys</a></li>
-							<li><a target="_blank" href="https://namso.ccgen.co/">Create Credit Cardt</a></li>
-							<li><a target="_blank" href="http://www.insecam.org/">Ips cams Wacht</a></li>
-							<li><a target="_blank" href="https://www.subnet-calculator.com/">Calcult Subnet Mascaret sub red</a></li>
-							<li><a target="_blank" href="https://www.hackthissite.org/">Skills of Practice for ahcking</a></li>
-							<li><a target="_blank" href="https://www.gameofhacks.com/">Game of hacks</a></li>
-							<li><a target="_blank" href="https://hack.me/">hackme </a></li>
-							<li><a target="_blank" href="https://www.darkhackerworld.com/2020/08/hacking-websites.html">List of games of hack</a></li>
-							<li><a target="_blank" href="https://es.fakenamegenerator.com/">Fake name and ident</a></li>
-							<li><a target="_blank" href="https://generadordni.com/">https://generadordni.com/</a></li>
-							<li><a target="_blank" href="https://www.phonenumbertrack.com/">Number localitation</a></li>
-							<li><a target="_blank" href="https://numeroesim.com/phone-numbers/">Numvirtual simp android</a></li>
-							<li><a target="_blank" href="https://www.spoofbox.com/es/telefono-virtual">Vitual pc numvber</a></li>
-							<li><a target="_blank" href="https://10minutemail.net/?lang=es">correo de 10minutos</a></li>
-							<li><a target="_blank" href="https://www.sololearn.com/Codes">Codes of Proyects Insterestings and goods free wacht</a></li>
-							<li><a target="_blank" href="http://stylesuxx.github.io/steganography/">Encode msj in image </a></li>
-							<li><a target="_blank" href="https://recibir-sms.com/">https://recibir-sms.com/</a></li>
-							<li><a target="_blank" href="https://archive.org/details/movies">Archive old of internet</a></li>
-							<li><a target="_blank" href="https://www.youtube.com/watch?v=CEbz5i4-Tuo">calla tristeza- miroslava</a></li>
-							<li><a target="_blank" href="https://archive.org/details/video_202108_202108">secret archive sub</a></li>
-							<li><a target="_blank" href="https://thatsthefinger.com/">https://thatsthefinger.com/</a></li>
-							<li><a target="_blank" href="https://hacker.mforos.com/936287/7950249-busco-equipo-de-hacker/?pag=2#99409664">Foro con  MAILS FOR PRACTICE</a></li>
-							<li><a target="_blank" href="https://docs.microsoft.com/es-es/cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=msvc-160">WEB C++</a></li>
-							<li><a target="_blank" href="https://www.fakepersongenerator.com">Fake person generador</a></li>
-							<li><a target="_blank" href="https://www.informeconfidencial.mx/nacional/11-casos-impunes-de-corrupcion-en-mexico/">corruption</a></li>
-							<li><a target="_blank" href="www.elftown.com/_random faces">similar to mi fried Face false</a></li>
-							<li><a target="_blank" href="https://names.igopaygo.com/es/personas/la-identidad-falsa">Fake PEOPLES WHIT ALL DATE AND LIFE</a></li>
-							<li><a target="_blank" href="https://llamada.mx/">Search phone numbers</a></li>
-							<li><a target="_blank" href="https://theunexplainedx.freeforums.net">Chat forums paranormal onli text</a></li>
-							<li><a target="_blank" href="https://www.unexplained-mysteries.com">Things mystiryus  </a></li>
-							<li><a target="_blank" href="https://tympanus.net/Tutorials/CSS3FullscreenSlideshow/index4.html">Change img example web</a></li>
-							<li><a target="_blank" href="https://temp-mail.org/es">Email temporal</a></li>
-							<li><a target="_blank" href="https://seabass.gsfc.nasa.gov/">Inf Public Stereets Experiment USA</a></li>
-							<li><a target="_blank" href="https://data.cencoos.org/#">As datasets are published Gilders System Observating</a></li>
-							<li><a target="_blank" href="https://www.data.gov/">Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.</a></li>
-							<li><a target="_blank" href="https://infotracer.com/">Search any peoople whit History</a></li>
-							<li><a target="_blank" href="https://www.it-swarm-es.com/es/javascript/"> Dude of javascript and tips</a></li>
-							<li><a target="_blank" href="https://www.proboards.com/">Forums create count free whit hosting</a></li>
-							<li><a target="_blank" href="https://hackforums.net/">Hacking forums and resources Dakt password : VkqCRw1W)MU4</a></li>
-							<li><a target="_blank" href="https://cutewallpaper.org/22/hacker-typer-wallpapers/view-page-22.html"> backgrounds hackers</a></li>
-							<li><a target="_blank" href="https://www.youtube.com/embed/CTV9kOEP8Mo?rel=0&autoplay=1&controls=0&showinfo=0&loop=1&disablekb=1&showinfo=0&playlist=CTV9kOEP8Mo">Fske video youtube hacker</a></li>
-							<li><a target="_blank" href="https://www.youtube.com/embed/llufppyponk?rel=0&autoplay=1&controls=0&showinfo=0&loop=1&disablekb=1&showinfo=0&playlist=llufppyponk">same fake video may be</a></li>
-							<li><a target="_blank" href="http://www.staggeringbeauty.com/"> gusano animado</a></li>
-							<li><a href="https://inventwithpython.com/es/">Learns whit python</a></li>
-							<li><a target="_blank" href="https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje">Loader CSS </a> </li>
-							<li><a target="_blank" href="https://www.pngegg.com/es/png-btcty"> PNG free for proyects</a> </li>
-							<li><a target="_blank" href="https://www.enterat.com/actualidad/estacion-espacial-directo.php"> estacion espacial</a> </li>
-							<li><a target="_blank" href="https://www.baidu.com/">Search from china</a> </li>
-							<li><a target="_blank" href="https://png.is/tool/findstock"> Dowloader from Stoock images</a> </li>
-							<li><a target="_blank" href=""></a> </li>
-							<li><a target="_blank" href=""></a> </li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.skylinewebcams.com/en/webcam.html">Sky cams online</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="http://www.opentopia.com/">cam live citys</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://namso.ccgen.co/">Create Credit Cardt</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="http://www.insecam.org/">Ips cams Wacht</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.subnet-calculator.com/">Calcult Subnet Mascaret sub red</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.hackthissite.org/">Skills of Practice for ahcking</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.gameofhacks.com/">Game of hacks</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://hack.me/">hackme </a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.darkhackerworld.com/2020/08/hacking-websites.html">List of games of hack</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://es.fakenamegenerator.com/">Fake name and ident</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://generadordni.com/">https://generadordni.com/</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.phonenumbertrack.com/">Number localitation</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://numeroesim.com/phone-numbers/">Numvirtual simp android</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.spoofbox.com/es/telefono-virtual">Vitual pc numvber</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://10minutemail.net/?lang=es">correo de 10minutos</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.sololearn.com/Codes">Codes of Proyects Insterestings and goods free wacht</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="http://stylesuxx.github.io/steganography/">Encode msj in image </a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://recibir-sms.com/">https://recibir-sms.com/</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/movies">Archive old of internet</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=CEbz5i4-Tuo">calla tristeza- miroslava</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/video_202108_202108">secret archive sub</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://thatsthefinger.com/">https://thatsthefinger.com/</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://hacker.mforos.com/936287/7950249-busco-equipo-de-hacker/?pag=2#99409664">Foro con  MAILS FOR PRACTICE</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://docs.microsoft.com/es-es/cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=msvc-160">WEB C++</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.fakepersongenerator.com">Fake person generador</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.informeconfidencial.mx/nacional/11-casos-impunes-de-corrupcion-en-mexico/">corruption</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="www.elftown.com/_random faces">similar to mi fried Face false</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://names.igopaygo.com/es/personas/la-identidad-falsa">Fake PEOPLES WHIT ALL DATE AND LIFE</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://llamada.mx/">Search phone numbers</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://theunexplainedx.freeforums.net">Chat forums paranormal onli text</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.unexplained-mysteries.com">Things mystiryus  </a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://tympanus.net/Tutorials/CSS3FullscreenSlideshow/index4.html">Change img example web</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://temp-mail.org/es">Email temporal</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://seabass.gsfc.nasa.gov/">Inf Public Stereets Experiment USA</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://data.cencoos.org/#">As datasets are published Gilders System Observating</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.data.gov/">Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://infotracer.com/">Search any peoople whit History</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.it-swarm-es.com/es/javascript/"> Dude of javascript and tips</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.proboards.com/">Forums create count free whit hosting</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://hackforums.net/">Hacking forums and resources Dakt password : VkqCRw1W)MU4</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://cutewallpaper.org/22/hacker-typer-wallpapers/view-page-22.html"> backgrounds hackers</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/embed/CTV9kOEP8Mo?rel=0&autoplay=1&controls=0&showinfo=0&loop=1&disablekb=1&showinfo=0&playlist=CTV9kOEP8Mo">Fske video youtube hacker</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/embed/llufppyponk?rel=0&autoplay=1&controls=0&showinfo=0&loop=1&disablekb=1&showinfo=0&playlist=llufppyponk">same fake video may be</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="http://www.staggeringbeauty.com/"> gusano animado</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://inventwithpython.com/es/">Learns whit python</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje">Loader CSS </a> </li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.pngegg.com/es/png-btcty"> PNG free for proyects</a> </li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.enterat.com/actualidad/estacion-espacial-directo.php"> estacion espacial</a> </li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://www.baidu.com/">Search from china</a> </li>
+							<li><a target="_blank" rel="noopener noreferrer" href="https://png.is/tool/findstock"> Dowloader from Stoock images</a> </li>
+							<li><a target="_blank" rel="noopener noreferrer" href=""></a> </li>
+							<li><a target="_blank" rel="noopener noreferrer" href=""></a> </li>
 							<button class="btn" onclick="link()">X</button>
 						</div>
 						
@@ -353,7 +306,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 						<div class="negar_2">
 							<div class="negar_3">
 								<nav><div class="bt">X</div></nav>
-								<img src="acess.png">
+								<img src="acess.png" alt="Acceso denegado">
 								<p class="textp">ACCESS DENIED!</p>
 								<p class="ipi">Rejecute Port: <strong  > 8080</strong></p>
 								<p class="ipi">IP ADDRESS :  <strong  id="ipId2"></strong></p>
@@ -365,10 +318,10 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 
 					<section class="intro" id="int">
 						<div class="intro_container">
-						<div class="border1"><img src="border.png"></div>
+						<div class="border1"><img src="border.png" alt="Borde decorativo"></div>
 						<div class="border2"></div>
 						<div class="border3"></div>
-						<div class="border4"><img src="border.png"></div>
+						<div class="border4"><img src="border.png" alt="Borde decorativo"></div>
 							<p class="textp2">ACCESS GRANTED!</p>
 							<p class="ipi">Rejecute Port: <strong  > 8080</strong></p>
 							<p class="ipi">IP ADDRESS :  <strong  id="ipId3"></strong></p>
@@ -380,7 +333,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 					
 					
 					<section class="sec" id="sec">
-						<div class="holograms"><img src="2.gif">
+						<div class="holograms"><img src="2.gif" alt="Holograma">
 							<img src="https://cdn.statcdn.com/Infographic/images/normal/16867.jpeg" alt="Infografía: El panorama de la corrupción en América Latina | Statista" width="100%" height="auto" style="width: 100%; height: auto !important; max-width:960px;-ms-interpolation-mode: bicubic; position: absolute;"/> 
 
 						</div>
@@ -403,7 +356,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 					<section class="cameras" id="show">
 						
 						<div class="container_cameras" >
-							<nav class="camera_nav"><img src="close.png"></nav>
+							<nav class="camera_nav"><img src="close.png" alt="Cerrar cámara"></nav>
 							<nav class="nav2">
 
 								<p id="as" class="title2"><b>Chanels</b>
@@ -428,10 +381,10 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 								</table>
 							</nav>
 							<div class="order1" >
-								<img src="id.png" class="cameras_img "  id="back1"> 
-								<img src="id.png" class="cameras_img "  id="back2">
-								<img src="id.png" class="cameras_img "  id="back3">
-								<img src="id.png" class="cameras_img "  id="back4"> 
+								<img src="id.png" class="cameras_img "  id="back1" alt="Cámara 1"> 
+								<img src="id.png" class="cameras_img "  id="back2" alt="Cámara 2">
+								<img src="id.png" class="cameras_img "  id="back3" alt="Cámara 3">
+								<img src="id.png" class="cameras_img "  id="back4" alt="Cámara 4"> 
 
 							</div>
 
@@ -458,9 +411,9 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 						<div class="inf" >
 
  
-							 <img class="img_show" id="img_1" src="http://webcam3.vilhelmina.se/mjpg/video.mjpg">
-							<img class="img_show" id="img_2" src="http://85.13.14.79/cgi-bin/faststream.jpg?stream=full&fps=0">
-							<img class="img_show" id="img_3" src="http://193.45.228.92/mjpg/video.mjpg"> 
+							 <img class="img_show" id="img_1" src="http://webcam3.vilhelmina.se/mjpg/video.mjpg" alt="Webcam 1">
+							<img class="img_show" id="img_2" src="http://85.13.14.79/cgi-bin/faststream.jpg?stream=full&fps=0" alt="Webcam 2">
+							<img class="img_show" id="img_3" src="http://193.45.228.92/mjpg/video.mjpg" alt="Webcam 3"> 
 
 
 
@@ -835,7 +788,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 						<section class="section_divs" >
 
 							<div class="div_img" >
-								<button class="btn_invisible" onclick="camara()" >
+								<button class="btn_invisible" onclick="camara()" aria-label="Abrir cámaras">
 									<div class="file">
 										<div class="sub_file"></div>
 									</div>
@@ -847,7 +800,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 							</div>
 
 							<div class="div_img" >
-								<button class="btn_invisible" onclick="link()" >
+								<button class="btn_invisible" onclick="link()" aria-label="Abrir enlaces">
 									<div class="file">
 										<div class="sub_file"></div>
 									</div>
@@ -860,8 +813,8 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 							</div>
 
 							<div class="div_img" >
-								<button class="btn_invisible" onclick="overflow()" >
-									<img class="img_btn" src="id.png">
+								<button class="btn_invisible" onclick="overflow()" aria-label="Generar Fake ID">
+									<img class="img_btn" src="id.png" alt="Fake ID">
 									<div class="file"> 
 										<div class="sub_file"></div>
 									</div>
@@ -874,7 +827,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 							</div>
 
 							<div class="div_img" >
-								<button class="btn_invisible" onclick="acess()" >
+								<button class="btn_invisible" onclick="acess()" aria-label="Abrir root/acceso">
 									<div class="file">
 										<div class="sub_file"></div>
 									</div>
@@ -886,7 +839,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 								</span>
 							</div>
 							<div class="div_img" >
-								<button class="btn_invisible" onclick="log()" >
+								<button class="btn_invisible" onclick="log()" aria-label="Abrir nothings">
 									<div class="file">
 										<div class="sub_file"></div>
 									</div>
@@ -898,7 +851,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 								</span>
 							</div>
 							<div class="div_img" >
-								<button class="btn_invisible"  >
+								<button class="btn_invisible" aria-label="Botón sin acción">
 									<div class="file">
 										<div class="sub_file"></div>
 									</div>
@@ -997,6 +950,62 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 					hea.removeEventListener("mousemove", onD);
 				});
 
+			</script>
+
+			<script>
+			const mensajes = [
+			  "Добро пожаловать в инструменты, необходимые для получения анонимной информации от разных пользователей, не злоупотребляйте с первого раза;)",
+			  "01101100 01100001 00100000 01100101 01100100 01110101 01100011 01100001 01100011 01101001 01101111 01101110 00100000 01100101 01110011 00100000 01100101 01101100 00100000 01100011 01100001 01101101 01101001 01101110 01101111 00100000 01100001 00100000 01101100 01100001 00100000 01110000 01100001 01111010"
+			];
+
+			const chat = document.getElementById('chat');
+
+			function escribirMensaje(mensaje, callback) {
+			  const p = document.createElement('p');
+			  chat.appendChild(p);
+			  let i = 0;
+			  function escribir() {
+				p.textContent = mensaje.slice(0, i) + (i % 2 === 0 ? '|' : ''); // cursor parpadeante
+				if (i < mensaje.length) {
+				  i++;
+				  setTimeout(escribir, 30); // velocidad de escritura
+				  chat.scrollTop = chat.scrollHeight; // scroll automático
+				} else {
+				  p.textContent = mensaje; // quitar cursor al final
+				  if (callback) setTimeout(callback, 500); // espera antes del siguiente mensaje
+				}
+			  }
+			  escribir();
+			}
+
+			function mostrarMensajesSecuencialmente(mensajes, idx = 0) {
+			  if (idx < mensajes.length) {
+				escribirMensaje(mensajes[idx], () => mostrarMensajesSecuencialmente(mensajes, idx + 1));
+			  }
+			}
+
+			mostrarMensajesSecuencialmente(mensajes);
+			</script>
+
+			<script>
+			// Generador de edad aleatoria (18-65)
+			document.getElementById('edadGenerada').textContent = Math.floor(Math.random() * (65 - 18 + 1)) + 18;
+
+			// Generador de SSN falso (formato: AAA-GG-SSSS)
+			function generarSSN() {
+			  function randomDigits(n) {
+				let str = '';
+				for (let i = 0; i < n; i++) str += Math.floor(Math.random() * 10);
+				return str;
+			  }
+			  // AAA: 001-899 (sin 666)
+			  let area = Math.floor(Math.random() * 899) + 1;
+			  if (area === 666) area = 665;
+			  let group = randomDigits(2);
+			  let serial = randomDigits(4);
+			  return area.toString().padStart(3, '0') + '-' + group.padStart(2, '0') + '-' + serial.padStart(4, '0');
+			}
+			document.getElementById('ssnGenerado').textContent = generarSSN();
 			</script>
 
 
