@@ -37,5 +37,5 @@ function muestra_pas() {
   let fa = document.getElementById('user');
 
   rig.innerHTML = "user: 0101";
-  fa.innerHTML = "pasword: 999";
+  fa.innerHTML = "password: 999";
 }
