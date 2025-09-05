@@ -34,14 +34,15 @@
 
 
 						<script type="text/javascript"> 
-							// Agregar en tu archivo `js.js` o dentro de una etiqueta <script> en HTML
-								window.onload = function() {
-								    let fechaElemento = document.querySelector(".Date p");
-								    let fecha = new Date();
-								    
-								    fechaElemento.innerHTML = `Fecha: ${fecha.getDate()} Semana: ${fecha.getDay()} Mes: ${fecha.getMonth() + 1} Año: ${fecha.getFullYear()} Hora: ${fecha.getHours()} Minutos: ${fecha.getMinutes()} Segundos: ${fecha.getSeconds()}`;
-								};
-
+							function actualizarFecha() {
+								let fechaElemento = document.querySelector(".Date p");
+								let fecha = new Date();
+								fechaElemento.innerHTML = `Fecha: ${fecha.getDate()} Semana: ${fecha.getDay()} Mes: ${fecha.getMonth() + 1} Año: ${fecha.getFullYear()} Hora: ${fecha.getHours()} Minutos: ${fecha.getMinutes()} Segundos: ${fecha.getSeconds()}`;
+							}
+							window.onload = function() {
+								actualizarFecha();
+								setInterval(actualizarFecha, 1000);
+							};
 							</script>
 						</p>
 					</div>
@@ -201,9 +202,9 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 
 							<!-- boton para generar datos -->
 <!-- 
-							<div class="overflow_div2">
+							 <div class="overflow_div2">
 								<button class="btn_2">Generar datos</button>
-							</div>
+							</div> 
  -->
 
 							<strong id="close"><button class="btn" onclick="overflow()">X</button></strong>

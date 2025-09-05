@@ -18,14 +18,20 @@ button{
 button::before{
 color: greenyellow;
 }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 ._back{
 	position: fixed;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-  background-size: cover;
-  background-image: url(backgrounds/4.jpg);
-  background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-image: url(backgrounds/4.jpg);
+    background-repeat: no-repeat;
+    animation: fadeIn 1.5s ease-in;
 }
 
 .back>img{
