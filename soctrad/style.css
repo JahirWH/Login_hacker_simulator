@@ -97,7 +97,7 @@ color: greenyellow;
 		color: rgba(2, 160, 10, 1.0);
 	}
 	span>p{
-		margin:  auto;
+		margin: 	auto;
 		text-transform: uppercase;
 	}
 	
@@ -874,6 +874,20 @@ background-color: rgb(131 239 24 / 73%);
 		color: blueviolet;
 		text-align: center;
 	}
+	.title:hover {
+    color: #00bfff;
+    text-shadow: 0 0 8px #00bfff, 0 0 2px #fff;
+    cursor: pointer;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #00bfff 40%, #0ff 100%);
+    color: #222;
+    box-shadow: 0 2px 8px rgba(0,191,255,0.2);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
 	.cameras{
 		position: absolute;
     top: 0px;
