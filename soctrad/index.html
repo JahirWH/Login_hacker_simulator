@@ -333,21 +333,27 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 					<!-- section secret of archt -->
 					
 					
-					<section class="sec" id="sec">
-						<div class="holograms"><img src="2.gif" alt="Holograma">
-							<img src="https://cdn.statcdn.com/Infographic/images/normal/16867.jpeg" alt="Infografía: El panorama de la corrupción en América Latina | Statista" width="100%" height="auto" style="width: 100%; height: auto !important; max-width:960px;-ms-interpolation-mode: bicubic; position: absolute;"/> 
-
+					<section class="sec glass-effect" id="sec">
+						<div class="holograms">
+							<img src="2.gif" alt="Holograma" class="hologram-animation">
 						</div>
 						<div class="content">
-							<nav>Php request <button class="btn" onclick="close_sec()">X</button></nav>
-							<p class="meca"><i>
-
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor<br>
-								incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam,<br>
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br>
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></i>
+							<nav class="request-header">
+								<span class="request-title">PHP Request</span>
+								<button class="btn close-btn" onclick="close_sec()">
+									<span class="close-icon">×</span>
+								</button>
+							</nav>
+							<div class="meca-container">
+								<p class="meca terminal-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor
+									incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</p>
+							</div>
 						</div>
 					</section>
 

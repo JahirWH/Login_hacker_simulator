@@ -302,49 +302,50 @@ if(!existe){
 
 // acesso
 
-function send(event){
+function verd() {
+    const s = document.getElementById("sec");
+    s.style.display = "block";
+    s.style.opacity = "1";
+}
 
+function redirec() {
+    window.location.href = "./dashboard/login/";
+}
+
+function send(event) {
     event.preventDefault();
-    let usuario = document.getElementById("user").value;
-    let contraseña = document.getElementById("pas").value;
-    let alerta = document.getElementById("negado");
-      let s = document.getElementById("sec");
-      let intro = document.getElementById("int");
-      let cocolate;
-      let ver;
-      let close = document.getElementById('ro');
+    const usuario = document.getElementById("user").value;
+    const contraseña = document.getElementById("pas").value;
+    const alerta = document.getElementById("negado");
+    const s = document.getElementById("sec");
+    const intro = document.getElementById("int");
+    const close = document.getElementById('ro');
 
-
-    if (usuario == "777" && contraseña == "t") {
-        intro.style.display = "block";
+    if (usuario === "none" && contraseña === "none") {
+        // Ocultar el formulario
         close.style.display = 'none';
-        ver = setTimeout(verd,5000);
-        return false;
         
-    }else {
-
+        // Mostrar el mensaje de acceso concedido
+        intro.style.display = "block";
+        intro.style.opacity = "1";
+        
+        // Mostrar la sección secreta después de 3 segundos
+        setTimeout(verd, 3000);
+        
+        return false;
+    } else {
         alerta.style.display = "block";
-        chocolate = setTimeout(redirec,3000);
-       
-    
-    }
-    function verd(){
-        if (true) {
-         s.style.visibility = "visible";
-    }
-     }
-    function redirec(){
-         window.location.href = "./dashboard/login/";
+        setTimeout(redirec, 3000);
     }
 }
 
 function close_sec(){
     let t = document.getElementById("sec");
-     let intro = document.getElementById("int");
+    let intro = document.getElementById("int");
 
     if (1<2) {
-        t.style.visibility = "hidden";
-         intro.style.display = "none";
+        t.style.display = "none";
+        intro.style.display = "none";
     }
 }
 // redirecionar
