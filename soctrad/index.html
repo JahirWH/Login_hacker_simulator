@@ -198,6 +198,9 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 										?>
 										-->
 									</li>
+									<li>
+										Número de teléfono <b><span id="telefonoGenerado"></span></b>
+									</li>
 								</ul>
 							</div>
 
@@ -1009,6 +1012,17 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 			  return area.toString().padStart(3, '0') + '-' + group.padStart(2, '0') + '-' + serial.padStart(4, '0');
 			}
 			document.getElementById('ssnGenerado').textContent = generarSSN();
+
+			// Generador de teléfono aleatorio (10 dígitos)
+			function generarTelefono() {
+			  let telefono = '';
+			  for (let i = 0; i < 10; i++) {
+				telefono += Math.floor(Math.random() * 10);
+			  }
+			  // Formato: (XXX) XXX-XXXX
+			  return '(' + telefono.slice(0, 3) + ') ' + telefono.slice(3, 6) + '-' + telefono.slice(6);
+			}
+			document.getElementById('telefonoGenerado').textContent = generarTelefono();
 			</script>
 
 			<!-- Scripts de configuración y utilidades -->
