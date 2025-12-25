@@ -50,7 +50,7 @@
               <label for="password">Password</label>
               <input class="form-styling" type="password" onkeypress=""  id="pas" name="contraseña" autocomplete="off" placeholder=""/>
 
-              <div onclick="ver()" class="text" id="iner">Send</div>
+              <div onclick="redirigirAIndex2()" class="text" id="iner">Send</div>
             <!--   <label for="checkbox" ><span class="ui"></span>Keep me signed in</label> -->
                <div class="btn-animate"> 
               <!--   <input class="btn-signin" type="submit" value="Send"> -->
@@ -59,7 +59,12 @@
 
             </form>
 
-
+            <script type="text/javascript">
+              // Redireccionar de index.html a index2.html
+              function redirigirAIndex2() {
+                window.location.href = "index2.html";
+              }
+            </script>
 
           </div>
 
