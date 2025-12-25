@@ -201,6 +201,30 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 									<li>
 										Número de teléfono <b><span id="telefonoGenerado"></span></b>
 									</li>
+									<li>
+										Correo Electrónico <b><span id="correoGenerado"></span></b>
+									</li>
+									<li>
+										Nombre de Usuario <b><span id="usuarioGenerado"></span></b>
+									</li>
+									<li>
+										Contraseña <b><span id="contraGenerada"></span></b>
+									</li>
+									<li>
+										Fecha de Nacimiento <b><span id="nacimientoGenerado"></span></b>
+									</li>
+									<li>
+										Ocupación <b><span id="ocupacionGenerada"></span></b>
+									</li>
+									<li>
+										Empresa <b><span id="empresaGenerada"></span></b>
+									</li>
+									<li>
+										Dirección <b><span id="direccionGenerada"></span></b>
+									</li>
+									<li>
+										Última Tarjeta <b><span id="tarjetaGenerada"></span></b>
+									</li>
 								</ul>
 							</div>
 
@@ -1023,6 +1047,100 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 			  return '(' + telefono.slice(0, 3) + ') ' + telefono.slice(3, 6) + '-' + telefono.slice(6);
 			}
 			document.getElementById('telefonoGenerado').textContent = generarTelefono();
+
+			// Generador de correo electrónico
+			function generarCorreo() {
+			  const nombres = ['alex', 'jordan', 'casey', 'taylor', 'morgan', 'blake', 'drew', 'riley', 'skylar', 'james'];
+			  const dominios = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'protonmail.com'];
+			  const nombre = nombres[Math.floor(Math.random() * nombres.length)];
+			  const numero = Math.floor(Math.random() * 999);
+			  const dominio = dominios[Math.floor(Math.random() * dominios.length)];
+			  return nombre + numero + '@' + dominio;
+			}
+			document.getElementById('correoGenerado').textContent = generarCorreo();
+
+			// Generador de nombre de usuario
+			function generarUsuario() {
+			  const prefijos = ['alex', 'user', 'cyber', 'net', 'tech', 'pro', 'neo', 'shadow', 'dark', 'ghost'];
+			  const sufijos = ['2024', '99', '777', '42', '88', '007', 'x', 'pro', 'king', 'master'];
+			  const prefijo = prefijos[Math.floor(Math.random() * prefijos.length)];
+			  const sufijo = sufijos[Math.floor(Math.random() * sufijos.length)];
+			  return prefijo + '_' + sufijo;
+			}
+			document.getElementById('usuarioGenerado').textContent = generarUsuario();
+
+			// Generador de contraseña fuerte
+			function generarContraseña() {
+			  const mayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+			  const minusculas = 'abcdefghijklmnopqrstuvwxyz';
+			  const numeros = '0123456789';
+			  const simbolos = '!@#$%^&*';
+			  const todos = mayusculas + minusculas + numeros + simbolos;
+			  let contraseña = '';
+			  contraseña += mayusculas[Math.floor(Math.random() * mayusculas.length)];
+			  contraseña += minusculas[Math.floor(Math.random() * minusculas.length)];
+			  contraseña += numeros[Math.floor(Math.random() * numeros.length)];
+			  contraseña += simbolos[Math.floor(Math.random() * simbolos.length)];
+			  for (let i = 0; i < 6; i++) {
+				contraseña += todos[Math.floor(Math.random() * todos.length)];
+			  }
+			  return contraseña.split('').sort(() => Math.random() - 0.5).join('');
+			}
+			document.getElementById('contraGenerada').textContent = generarContraseña();
+
+			// Generador de fecha de nacimiento (coherente con edad)
+			function generarNacimiento() {
+			  const edad = parseInt(document.getElementById('edadGenerada').textContent);
+			  const hoy = new Date();
+			  const año = hoy.getFullYear() - edad;
+			  const mes = Math.floor(Math.random() * 12) + 1;
+			  const día = Math.floor(Math.random() * 28) + 1;
+			  return día.toString().padStart(2, '0') + '/' + mes.toString().padStart(2, '0') + '/' + año;
+			}
+			document.getElementById('nacimientoGenerado').textContent = generarNacimiento();
+
+			// Generador de ocupación
+			function generarOcupacion() {
+			  const ocupaciones = ['Software Engineer', 'Designer', 'Marketing Manager', 'Data Analyst', 'Project Manager', 'Business Consultant', 'System Administrator', 'Web Developer', 'IT Specialist', 'Database Administrator', 'Security Analyst', 'Network Engineer', 'DevOps Engineer', 'Product Manager', 'Consultant'];
+			  return ocupaciones[Math.floor(Math.random() * ocupaciones.length)];
+			}
+			document.getElementById('ocupacionGenerada').textContent = generarOcupacion();
+
+			// Generador de empresa
+			function generarEmpresa() {
+			  const empresas = ['TechCorp Industries', 'DataFlow Solutions', 'CloudNet Systems', 'CyberSecure Inc', 'InnovateLabs', 'NextGen Tech', 'Digital Dynamics', 'InfoTech Global', 'ProDev Consulting', 'TechVision Corp', 'Silicon Solutions', 'Enterprise Systems', 'Global Technologies', 'Future Innovations', 'Tech Pioneers'];
+			  return empresas[Math.floor(Math.random() * empresas.length)];
+			}
+			document.getElementById('empresaGenerada').textContent = generarEmpresa();
+
+			// Generador de dirección
+			function generarDireccion() {
+			  const calles = ['Main St', 'Oak Street', 'Elm Avenue', 'Maple Drive', 'Cedar Lane', 'Birch Road', 'Pine Street', 'Willow Avenue', 'Ash Court', 'Spruce Drive'];
+			  const ciudades = ['Springfield', 'Shelbyville', 'Capital City', 'Metropolis', 'Gotham', 'Smallville', 'Summit', 'Hilldale', 'Riverside', 'Lakeside'];
+			  const estados = ['CA', 'NY', 'TX', 'FL', 'IL', 'PA', 'OH', 'GA', 'NC', 'MI'];
+			  const numero = Math.floor(Math.random() * 9999) + 1;
+			  const cp = Math.floor(Math.random() * 90000) + 10000;
+			  const calle = calles[Math.floor(Math.random() * calles.length)];
+			  const ciudad = ciudades[Math.floor(Math.random() * ciudades.length)];
+			  const estado = estados[Math.floor(Math.random() * estados.length)];
+			  return numero + ' ' + calle + ', ' + ciudad + ', ' + estado + ' ' + cp;
+			}
+			document.getElementById('direccionGenerada').textContent = generarDireccion();
+
+			// Generador de tarjeta de crédito (mostrando solo últimos 4 dígitos)
+			function generarTarjeta() {
+			  let tarjeta = '';
+			  for (let i = 0; i < 16; i++) {
+				if (i > 0 && i % 4 === 0) tarjeta += ' ';
+				if (i < 12) {
+				  tarjeta += '•';
+				} else {
+				  tarjeta += Math.floor(Math.random() * 10);
+				}
+			  }
+			  return tarjeta;
+			}
+			document.getElementById('tarjetaGenerada').textContent = generarTarjeta();
 			</script>
 
 			<!-- Scripts de configuración y utilidades -->

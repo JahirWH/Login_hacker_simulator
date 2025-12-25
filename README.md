@@ -4,7 +4,7 @@
 ![PHP](https://img.shields.io/badge/PHP-Legacy-777bb4)
 
 ![Captura3](./banner.webp)  
-![Captura4](./banner2.webp)
+![Captura4](./banner3.png)
 
 ## Descontinuación
 
