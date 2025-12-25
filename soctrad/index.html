@@ -1,14 +1,15 @@
 	
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 
-	<title>DAKt</title>
+	<title>DAKt - Hacker Simulator</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="apple-touch-icon" href="wifi.png">
-	<script type="text/javascript" src="js.js"></script>
 	<meta charset="utf-8" >
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="DAKt - Simulador de login hacker interactivo">
+	<meta name="theme-color" content="#000000">
 
 
 	
@@ -294,9 +295,9 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 
 							<!-- <p class="title2"></p> -->
 							<form class="acess_form">
-								<input type="text" autocomplete="off" name="user" placeholder="Username here" id="user">
+								<input type="text" autocomplete="off" name="user" placeholder="Username none" id="user">
 
-								<input type="password" name="password" placeholder="Password here" id="pas">
+								<input type="password" name="password" placeholder="Password none" id="pas">
 								
 							</form>
 							<nav class="acess_nav2"><span class="decor2"></span> <button class="send" onclick="send(event)" >connect</button></nav>
@@ -333,7 +334,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 					<!-- section secret of archt -->
 					
 					
-					<section class="sec glass-effect" id="sec">
+					<section id="sec" class="sec glass-effect" >
 						<div class="holograms">
 							<img src="2.gif" alt="Holograma" class="hologram-animation">
 						</div>
@@ -346,12 +347,7 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 							</nav>
 							<div class="meca-container">
 								<p class="meca terminal-text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor
-									incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									Text here for paste
 								</p>
 							</div>
 						</div>
@@ -1015,6 +1011,14 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 			document.getElementById('ssnGenerado').textContent = generarSSN();
 			</script>
 
+			<!-- Scripts de configuración y utilidades -->
+			<script src="config.js"></script>
+			<script src="utils.js"></script>
+			<script src="handlers.js"></script>
+			<script src="animations.js"></script>
+			<script src="js.js"></script>
 
+			<!-- API de IP -->
+			<script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
 
-			</html>
+			</html>			</html>

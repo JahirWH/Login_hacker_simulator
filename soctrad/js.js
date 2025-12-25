@@ -304,12 +304,16 @@ if(!existe){
 
 function verd() {
     const s = document.getElementById("sec");
-    s.style.display = "block";
-    s.style.opacity = "1";
+
+    if (s.style.display !="block"){
+        s.style.opacity = "1";
+        s.style.display = "block";
+    }
+
 }
 
 function redirec() {
-    window.location.href = "./dashboard/login/";
+    window.location.href = "./";
 }
 
 function send(event) {
@@ -317,7 +321,7 @@ function send(event) {
     const usuario = document.getElementById("user").value;
     const contraseña = document.getElementById("pas").value;
     const alerta = document.getElementById("negado");
-    const s = document.getElementById("sec");
+    // const s = document.getElementById("sec");
     const intro = document.getElementById("int");
     const close = document.getElementById('ro');
 
@@ -332,7 +336,7 @@ function send(event) {
         // Mostrar la sección secreta después de 3 segundos
         setTimeout(verd, 3000);
         
-        return false;
+        // return false;
     } else {
         alerta.style.display = "block";
         setTimeout(redirec, 3000);
