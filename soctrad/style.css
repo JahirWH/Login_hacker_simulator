@@ -1869,3 +1869,180 @@ strong{
 .meca-container::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 255, 255, 0.5);
 }
+
+/* ===== PORT SCAN STYLES MEJORAS ===== */
+
+.port-scan {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: rgba(0, 20, 40, 0.95);
+  border: 2px solid #0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.1);
+  display: none;
+  min-width: 500px;
+  max-width: 700px;
+}
+
+.container_port_scan {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.port_scan_nav {
+  background: linear-gradient(135deg, rgba(0, 100, 100, 0.5) 0%, rgba(0, 50, 100, 0.5) 100%);
+  border-bottom: 1px solid #0f0;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+}
+
+.port_scan_title {
+  color: #0f0;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: Minecraft;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.port_scan_content {
+  padding: 20px;
+  color: #0f0;
+  font-family: Minecraft;
+}
+
+.target_input {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.target_input label {
+  color: #0f0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.target_input input {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 8px 12px;
+  font-family: Minecraft;
+  border-radius: 4px;
+  outline: none;
+}
+
+.target_input input:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.btn_scan {
+  background: rgba(0, 255, 0, 0.2);
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 10px 20px;
+  font-family: Minecraft;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn_scan:hover {
+  background: rgba(0, 255, 0, 0.4);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.btn_scan:active {
+  transform: scale(0.98);
+}
+
+.scan_progress {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.scan_progress p {
+  color: #0f0;
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+.progress_bar {
+  width: 100%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.progress_fill {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 255, 0, 0.3) 0%, #0f0 100%);
+  width: 0%;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.ports_results {
+  margin-top: 20px;
+}
+
+.ports_results h3 {
+  color: #0f0;
+  margin-top: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+  padding-bottom: 10px;
+}
+
+.ports_results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.ports_results li {
+  padding: 8px;
+  margin: 5px 0;
+  background: rgba(0, 255, 0, 0.05);
+  border-left: 3px solid #0f0;
+  font-size: 11px;
+  color: #0f0;
+  border-radius: 2px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #0f0;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff0;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+

@@ -380,6 +380,33 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 						</div>
 					</section>
 
+					<!-- Port Scan Section -->
+					<section class="port-scan" id="portScanModal">
+						<div class="container_port_scan">
+							<nav class="port_scan_nav">
+								<span class="port_scan_title">Network Port Scanner</span>
+								<button class="btn close-btn" onclick="closePortScan()">×</button>
+							</nav>
+							<div class="port_scan_content">
+								<div class="target_input">
+									<label>Target IP:</label>
+									<input type="text" id="targetIP" placeholder="192.168.1.100" value="">
+									<button class="btn_scan" onclick="startPortScan()">SCAN</button>
+								</div>
+								<div class="scan_progress" id="scanProgress" style="display:none;">
+									<p>Scanning ports...</p>
+									<div class="progress_bar">
+										<div class="progress_fill" id="progressFill"></div>
+									</div>
+									<p id="scanStatus">Port 1/65535</p>
+								</div>
+								<div class="ports_results" id="portsResults" style="display:none;">
+									<h3>Open Ports Found:</h3>
+									<ul id="portsList"></ul>
+								</div>
+							</div>
+						</div>
+					</section>
 
 					<!-- camaaras showww -->
 
@@ -869,6 +896,18 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 								</span>
 							</div>
 							<div class="div_img" >
+								<button class="btn_invisible" onclick="openPortScan()" aria-label="Escáner de puertos">
+									<div class="file">
+										<div class="sub_file"></div>
+									</div>
+								</button>
+								<span>
+									<p class="name_detec">Port Scan</p>
+
+
+								</span>
+							</div>
+							<div class="div_img" >
 								<button class="btn_invisible" onclick="log()" aria-label="Abrir nothings">
 									<div class="file">
 										<div class="sub_file"></div>
@@ -1141,6 +1180,89 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 			  return tarjeta;
 			}
 			document.getElementById('tarjetaGenerada').textContent = generarTarjeta();
+
+			// ===== PORT SCAN FUNCTIONS =====
+			// Puertos comunes simulados
+			const commonPorts = [
+			  {port: 21, service: 'FTP', name: 'File Transfer Protocol'},
+			  {port: 22, service: 'SSH', name: 'Secure Shell'},
+			  {port: 25, service: 'SMTP', name: 'Simple Mail Transfer'},
+			  {port: 53, service: 'DNS', name: 'Domain Name System'},
+			  {port: 80, service: 'HTTP', name: 'Web Server'},
+			  {port: 110, service: 'POP3', name: 'Post Office Protocol'},
+			  {port: 143, service: 'IMAP', name: 'Internet Message Access'},
+			  {port: 443, service: 'HTTPS', name: 'Secure Web Server'},
+			  {port: 445, service: 'SMB', name: 'Samba File Sharing'},
+			  {port: 3306, service: 'MySQL', name: 'MySQL Database'},
+			  {port: 3389, service: 'RDP', name: 'Remote Desktop Protocol'},
+			  {port: 5432, service: 'PostgreSQL', name: 'PostgreSQL Database'},
+			  {port: 5900, service: 'VNC', name: 'Virtual Network Computing'},
+			  {port: 8080, service: 'HTTP-ALT', name: 'Alternative HTTP'},
+			  {port: 8443, service: 'HTTPS-ALT', name: 'Alternative HTTPS'}
+			];
+
+			function openPortScan() {
+			  const modal = document.getElementById('portScanModal');
+			  modal.style.display = 'block';
+			  // Generar IP objetivo aleatoria
+			  const ip1 = Math.floor(Math.random() * 256);
+			  const ip2 = Math.floor(Math.random() * 256);
+			  const ip3 = Math.floor(Math.random() * 256);
+			  const ip4 = Math.floor(Math.random() * 256);
+			  document.getElementById('targetIP').value = ip1 + '.' + ip2 + '.' + ip3 + '.' + ip4;
+			}
+
+			function closePortScan() {
+			  const modal = document.getElementById('portScanModal');
+			  modal.style.display = 'none';
+			}
+
+			function startPortScan() {
+			  const targetIP = document.getElementById('targetIP').value;
+			  const progressDiv = document.getElementById('scanProgress');
+			  const resultsDiv = document.getElementById('portsResults');
+			  const portsList = document.getElementById('portsList');
+			  
+			  // Limpiar resultados previos
+			  portsList.innerHTML = '';
+			  resultsDiv.style.display = 'none';
+			  progressDiv.style.display = 'block';
+
+			  let scannedPorts = 0;
+			  const totalPorts = 65535;
+			  const openPorts = [];
+
+			  // Seleccionar puertos abiertos aleatorios (máximo 5)
+			  const numOpenPorts = Math.floor(Math.random() * 5) + 1;
+			  const shuffledPorts = commonPorts.sort(() => Math.random() - 0.5);
+			  for (let i = 0; i < numOpenPorts; i++) {
+				openPorts.push(shuffledPorts[i]);
+			  }
+
+			  // Simular escaneo progresivo
+			  const scanInterval = setInterval(() => {
+				scannedPorts += Math.floor(Math.random() * 1000) + 500;
+				if (scannedPorts > totalPorts) scannedPorts = totalPorts;
+
+				const progress = (scannedPorts / totalPorts) * 100;
+				document.getElementById('progressFill').style.width = progress + '%';
+				document.getElementById('scanStatus').textContent = 'Port ' + scannedPorts + '/' + totalPorts;
+
+				if (scannedPorts >= totalPorts) {
+				  clearInterval(scanInterval);
+				  progressDiv.style.display = 'none';
+				  
+				  // Mostrar resultados
+				  resultsDiv.style.display = 'block';
+				  openPorts.forEach((portObj, index) => {
+					const li = document.createElement('li');
+					li.style.cssText = 'padding: 8px; margin: 5px 0; background: rgba(0,255,0,0.1); border-left: 3px solid #0f0;';
+					li.innerHTML = '<strong>[OPEN]</strong> Port ' + portObj.port + ' - ' + portObj.service + ' (' + portObj.name + ')';
+					portsList.appendChild(li);
+				  });
+				}
+			  }, 100);
+			}
 			</script>
 
 			<!-- Scripts de configuración y utilidades -->
