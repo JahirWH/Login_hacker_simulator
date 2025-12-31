@@ -381,7 +381,9 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 					</section>
 
 					<!-- Port Scan Section -->
-					<section class="port-scan" id="portScanModal">
+
+					<section class="background-port-scan" id="background-port-scan">
+						<div class="port-scan" id="portScanModal">
 						<div class="container_port_scan">
 							<nav class="port_scan_nav">
 								<span class="port_scan_title">Network Port Scanner</span>
@@ -406,7 +408,10 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 								</div>
 							</div>
 						</div>
+					</div>
 					</section>
+
+
 
 					<!-- camaaras showww -->
 
@@ -1203,7 +1208,10 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 
 			function openPortScan() {
 			  const modal = document.getElementById('portScanModal');
+			  const modal2 = document.getElementById('background-port-scan');
+
 			  modal.style.display = 'block';
+			  modal2.style.display = 'block';
 			  // Generar IP objetivo aleatoria
 			  const ip1 = Math.floor(Math.random() * 256);
 			  const ip2 = Math.floor(Math.random() * 256);
@@ -1214,6 +1222,8 @@ document.getElementById("nombreGenerado").textContent = generarNombre();
 
 			function closePortScan() {
 			  const modal = document.getElementById('portScanModal');
+			  const modal2 = document.getElementById('background-port-scan');
+			  modal2.style.display = 'none';
 			  modal.style.display = 'none';
 			}
 
